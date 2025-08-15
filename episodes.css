@@ -1,0 +1,172 @@
+.head{
+    padding: 36px 20px 20px;
+    display: flex;
+    height: 227px;
+    background: linear-gradient(to bottom, rgba(5, 105, 82, 0.85), #014630cb)
+}
+.head .cover img{
+    width: 172px;
+    height: 172px;
+    border-radius: 8px;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.428);
+}
+.head .desc{
+    margin-left: 20px;
+    align-self: flex-end;
+    text-shadow: 10px rgba(0, 0, 0, 0.428);
+    margin-bottom: -15px;
+}
+.head .desc .type{
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: -15px;
+}
+.head .desc .title h1{
+    font-size: 65px;
+    font-weight: 700;
+}
+.head .desc .owner{
+    display: flex;
+    align-items: center;
+}
+.head .desc .owner .creator{
+    display: flex;
+    font-size: 14px;
+    font-weight: 600;
+}
+.head .desc .owner img{
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-right: 5px;
+    margin-top: -2px;
+}
+.head .desc .owner .numbers{
+    display: flex;
+    color: #b3b3b3;
+    font-size: 14px;
+}
+.header-sticky{
+    position: sticky;
+    display: none;
+    z-index: 900;
+    width: 784px;
+    height: 64px;
+    background-color: #003725;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.header-playlist{
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+}
+.header-playlist .play button{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    background-color: #1ed760;
+    font-size: 30px;
+}
+.header-playlist .name h2{
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.body-playlist{
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(5, 105, 82, 0.266) 10%, #00372500 35%);
+}
+.body-playlist .buttons{
+    display: flex;
+    width: 765px;
+    height: 94px;
+    padding: 19px;
+    align-items: center;
+}
+.body-playlist .play-playlist{
+    height: 95px;
+    align-content: center;
+}
+.body-playlist .play-playlist button{
+    width: 56px;
+    height: 56px;
+    font-size: 32px;
+    background-color: #1ed760;
+    border-radius: 50%;
+    border: none;
+    text-align: center;
+    align-content: center;
+}
+.episodes{
+    padding: 0px 20px;
+    margin-bottom: 100px;
+}
+.episodes .episode{
+    width: 755px;
+    display: flex;
+    padding: 8px;
+}
+.episodes .episode .cover-episode img{
+    width: 176px;
+    height: 99px;
+    border-radius: 8px;
+}
+.episodes .episode .episode-desc{
+    margin-left: 15px;
+}
+.episodes .episode .episode-desc .episode-title{
+    font-size: 15px;
+}
+.episodes .episode .episode-desc .artist-episode{
+    color: #b3b3b3;
+    font-size: 13px;
+    font-weight: 400;
+    margin-top: -15px;
+}
+.episodes .episode .episode-desc .description-ep{
+    color: #b3b3b3;
+    font-size: 13px;
+    font-weight: 400;
+    margin-top: -10px;
+}
+.episodes .episode .episode-desc .date-progress{
+    display: flex;
+    font-size: 14px;
+    margin-top: -5px;
+}
+.episodes .episode .episode-desc .date-progress progress{
+    width: 85px;
+    height: 12px;
+    color: #b3b3b3;
+    outline: none;
+    accent-color: #fff;
+    border-color: none;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+.episodes .episode .added{
+    display: flex;
+}
+.episodes .episode .added .add-ep button{
+    width: 24px;
+    height: 24px;
+    color: #1ed760;
+    border: none;
+    background: none;
+    font-size: 22px;
+    width: 500px;
+    text-align: start;
+}
+.episodes .episode .added .play-ep button{
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+hr{
+    width: 100%;
+}

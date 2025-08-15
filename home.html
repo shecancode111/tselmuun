@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+    <title>Spotify</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <a href=""><img src="https://storage.googleapis.com/pr-newsroom-wp/1/2023/05/Spotify_Primary_Logo_RGB_White.png"></a>
+        </div>
+        <div class="main-header">
+            <div class="home-button" onclick="loadPlaylist('main-page', 'default.html')">
+                <button><i class="bi bi-house-door-fill"></i></button>
+            </div>
+            <div class="search">
+                <button class="search-icon">
+                    <i class="bi bi-search"></i>
+                </button>
+                <input placeholder="What do you want to play?" type="search">
+                <button class="folder"><i class="bi bi-archive"></i></button>
+            </div>
+        </div>
+        <div class="menu">
+            <div class="install-app">
+                <button><a href=""><i class="bi bi-arrow-down-circle"></i><span>Install App</span></a></button>
+            </div>
+            <div class="notifs">
+                <button><i class="bi bi-bell"></i></button>
+            </div>
+            <div class="people-button">
+                <button><i class="bi bi-people-fill"></i></button>
+            </div>
+            <div class="profile" onclick="dropDown()" id="profile">
+                <button>
+                    <img src="https://i.pinimg.com/736x/7c/d3/a2/7cd3a2ebab71e04712ae41513ae98567.jpg">
+                </button>
+                <div class="dropdown" id="drop">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="body">
+        <div class="left-sidebar">
+            <div class="left-header">
+                <div class="left-top">
+                    <div class="your-library">
+                        <div class="hide-icon">
+                            <button><i class="bi bi-layout-sidebar"></i></button>
+                        </div>
+                        <div class="library">
+                            <button><h1>Your Library</h1></button>
+                        </div>
+                    </div>
+                    <div class="extra">
+                        <div class="create">
+                            <button><i class="bi bi-plus-lg"></i></button>
+                        </div>
+                        <div class="expand">
+                            <button><i class="bi bi-arrows-angle-expand"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="left-bottom">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <button>Playlist</button>
+                          </div>
+                          <div class="swiper-slide">
+                            <button>Artists</button>
+                          </div>
+                          <div class="swiper-slide">
+                            <button>Albums</button>
+                          </div>
+                          <div class="swiper-slide">
+                            <button>Podcasts & Shows</button>
+                          </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                      </div>
+                </div>
+            </div>
+            <div class="left-sidebar-content">
+                <div class="search">
+                    <div class="search-button-input">
+                        <button><i class="bi bi-search"></i></button>
+                        <input placeholder="Search in Your Library" type="search">
+                    </div>
+                    <div class="recents">
+                        <button><span>Recents</span> <i class="bi bi-list-ul"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="playlist-list">
+                <div class="playlist-left" onclick="loadPlaylist('main-page', 'episodes.html', 'episodes.css')">
+                    <div class="cover">
+                        <img src="https://i.postimg.cc/C1N0vkmS/Screenshot-2025-08-01-at-18-28-38.png">
+                        <div class="play-button">
+                            <i class="bi bi-play-fill"></i>
+                        </div>
+                    </div>
+                    <div class="information">
+                        <div class="playlist-name">
+                            <p>Your Episodes</p>
+                        </div>
+                        <div class="type">
+                            <p>Saved & downloaded episodes</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="playlist-left" onclick="loadPlaylist('main-page', 'shut-up.html', 'shut-up.css')">
+                    <div class="cover">
+                        <img src="https://i.postimg.cc/6p5MRRGC/Screenshot-2025-08-01-at-18-50-06.png">
+                        <div class="play-button">
+                            <i class="bi bi-play-fill"></i>
+                        </div>
+                    </div>
+                    <div class="information">
+                        <div class="playlist-name">
+                            <p>Shut up</p>
+                        </div>
+                        <div class="type">
+                            <p>Playlist<i class="bi bi-dot"></i>Tselmuun</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="playlist-left">
+                    <div class="cover">
+                        <img src="https://i.postimg.cc/KYCfdHp5/Screenshot-2025-08-01-at-18-50-17.png">
+                        <div class="play-button">
+                            <i class="bi bi-play-fill"></i>
+                        </div>
+                    </div>
+                    <div class="information">
+                        <div class="playlist-name">
+                            <p>All out</p>
+                        </div>
+                        <div class="type">
+                            <p>Playlist<i class="bi bi-dot"></i>Tselmuun</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="playlist-left">
+                    <div class="cover">
+                        <img src="https://i.postimg.cc/2Sc2x64M/Screenshot-2025-08-01-at-18-50-49.png">
+                        <div class="play-button">
+                            <i class="bi bi-play-fill"></i>
+                        </div>
+                    </div>
+                    <div class="information">
+                        <div class="playlist-name">
+                            <p>Hip Hop Mix</p>
+                        </div>
+                        <div class="type">
+                            <p>Playlist<i class="bi bi-dot"></i>Spotify</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="playlist-left">
+                    <div class="artist">
+                        <img src="https://i.postimg.cc/13w3Gnh5/jeff-buckley.jpg">
+                        <div class="play-button">
+                            <i class="bi bi-play-fill"></i>
+                        </div>
+                    </div>
+                    <div class="information">
+                        <div class="playlist-name">
+                            <p>Jeff Buckley</p>
+                        </div>
+                        <div class="type">
+                            <p>Artist</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="playlist-left">
+                    <div class="cover">
+                        <img src="https://i.postimg.cc/SKnV1hds/Screenshot-2025-08-01-at-18-51-05.png">
+                        <div class="play-button">
+                            <i class="bi bi-play-fill"></i>
+                        </div>
+                    </div>
+                    <div class="information">
+                        <div class="playlist-name">
+                            <p>Liked Songs</p>
+                        </div>
+                        <div class="type">
+                            <p>Playlist<i class="bi bi-dot"></i>126 songs</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="playlist-left">
+                    <div class="cover">
+                        <img src="https://i.postimg.cc/50vg1SZW/Screenshot-2025-08-01-at-18-50-58.png">
+                        <div class="play-button">
+                            <i class="bi bi-play-fill"></i>
+                        </div>
+                    </div>
+                    <div class="information">
+                        <div class="playlist-name">
+                            <p>90'S HITS|TOP 100 SONGS</p>
+                        </div>
+                        <div class="type">
+                            <p>Playlist<i class="bi bi-dot"></i>FiltrUS</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="playlist-left">
+                    <div class="cover">
+                        <img src="https://i.postimg.cc/Kj2NYg2k/Screenshot-2025-08-01-at-18-51-16.png">
+                        <div class="play-button">
+                            <i class="bi bi-play-fill"></i>
+                        </div>
+                    </div>
+                    <div class="information">
+                        <div class="playlist-name">
+                            <p>Party Hits 2010s</p>
+                        </div>
+                        <div class="type">
+                            <p>Playlist<i class="bi bi-dot"></i>Spotify</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="playlist-left">
+                    <div class="cover">
+                        <img src="https://i.postimg.cc/VvWF0Lf7/Screenshot-2025-08-01-at-18-51-55.png">
+                        <div class="play-button">
+                            <i class="bi bi-play-fill"></i>
+                        </div>
+                    </div>
+                    <div class="information">
+                        <div class="playlist-name">
+                            <p>euphoric</p>
+                        </div>
+                        <div class="type">
+                            <p>Playlist<i class="bi bi-dot"></i>Tselmuun</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="playlist-left">
+                    <div class="cover">
+                        <img src="https://storage.googleapis.com/pr-newsroom-wp/1/2023/09/Early-Morning-1024x1024.png">
+                        <div class="play-button">
+                            <i class="bi bi-play-fill"></i>
+                        </div>
+                    </div>
+                    <div class="information">
+                        <div class="playlist-name">
+                            <p>daylist</p>
+                        </div>
+                        <div class="type">
+                            <p>Playlist<i class="bi bi-dot"></i>Spotify</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="playlist-left">
+                    <div class="artist">
+                        <img src="https://i.scdn.co/image/ab67616100005174a03696716c9ee605006047fd">
+                        <div class="play-button">
+                            <i class="bi bi-play-fill"></i>
+                        </div>
+                    </div>
+                    <div class="information">
+                        <div class="playlist-name">
+                            <p>Radiohead</p>
+                        </div>
+                        <div class="type">
+                            <p>Artist</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="playlist-left">
+                    <div class="artist">
+                        <img src="https://i1.sndcdn.com/avatars-KdbC0MdRRdZDplu1-TqA4ZA-t240x240.jpg">
+                    </div>
+                    <div class="information">
+                        <div class="playlist-name">
+                            <p>Deftones</p>
+                        </div>
+                        <div class="type">
+                            <p>Artist</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="playlist-left">
+                    <div class="artist">
+                        <img src="https://i.scdn.co/image/ab6761610000e5eb4a21b4760d2ecb7b0dcdc8da">
+                        <div class="play-button">
+                            <i class="bi bi-play-fill"></i>
+                        </div>
+                    </div>
+                    <div class="information">
+                        <div class="playlist-name">
+                            <p>Billie Eilish</p>
+                        </div>
+                        <div class="type">
+                            <p>Artist</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="playlist-left">
+                    <div class="cover">
+                        <img src="https://i.scdn.co/image/ab67616d0000b27371d62ea7ea8a5be92d3c1f62">
+                        <div class="play-button">
+                            <i class="bi bi-play-fill"></i>
+                        </div>
+                    </div>
+                    <div class="information">
+                        <div class="playlist-name">
+                            <p>HIT ME HARD AND SOFT</p>
+                        </div>
+                        <div class="type">
+                            <p>Album<i class="bi bi-dot"></i>Billie Eilish</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="playlist-left">
+                    <div class="artist">
+                        <img src="https://media.npr.org/assets/img/2015/07/31/ct-228-mac-ep-cover_1400_custom-09b1a6d45b6b432d3271e80d9ff57f6ff2987a6c.jpg?s=1100&c=50&f=jpeg">
+                        <div class="play-button">
+                            <i class="bi bi-play-fill"></i>
+                        </div>
+                    </div>
+                    <div class="information">
+                        <div class="playlist-name">
+                            <p>Mac DeMarco</p>
+                        </div>
+                        <div class="type">
+                            <p>Artist</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="playlist-left">
+                    <div class="artist">
+                        <img src="https://i.postimg.cc/9FNLd0PS/50-cent.jpg">
+                        <div class="play-button">
+                            <i class="bi bi-play-fill"></i>
+                        </div>
+                    </div>
+                    <div class="information">
+                        <div class="playlist-name">
+                            <p>50 Cent</p>
+                        </div>
+                        <div class="type">
+                            <p>Artist</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="playlist-left">
+                    <div class="artist">
+                        <img src="https://i.discogs.com/xrt_A--gs_-MeiYYQzcKYPLd1Wz_ksMRf30FzNKbDQw/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgzMDgw/LTEzMTkzNzgzNTgu/anBlZw.jpeg">
+                        <div class="play-button">
+                            <i class="bi bi-play-fill"></i>
+                        </div>
+                    </div>
+                    <div class="information">
+                        <div class="playlist-name">
+                            <p>The Smiths</p>
+                        </div>
+                        <div class="type">
+                            <p>Artist</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="playlist-left">
+                    <div class="artist">
+                        <img src="https://i.scdn.co/image/ab67616100005174b99cacf8acd5378206767261">
+                        <div class="play-button">
+                            <i class="bi bi-play-fill"></i>
+                        </div>
+                    </div>
+                    <div class="information">
+                        <div class="playlist-name">
+                            <p>Lana Del Rey</p>
+                        </div>
+                        <div class="type">
+                            <p>Artist</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="playlist-left">
+                    <div class="artist">
+                        <img src="https://bookingagentinfo.com/wp-content/uploads/2025/04/ab6761610000e5ebe187dca750abfd3688836309-1.jpg">
+                        <div class="play-button">
+                            <i class="bi bi-play-fill"></i>
+                        </div>
+                    </div>
+                    <div class="information">
+                        <div class="playlist-name">
+                            <p>Brent Faiyaz</p>
+                        </div>
+                        <div class="type">
+                            <p>Artist</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="playlist-left">
+                    <div class="artist">
+                        <img src="https://i.postimg.cc/V6GKKNQd/Frank-Ocean-2022-Blonded.jpg">
+                        <div class="play-button">
+                            <i class="bi bi-play-fill"></i>
+                        </div>
+                    </div>
+                    <div class="information">
+                        <div class="playlist-name">
+                            <p>Frank Ocean</p>
+                        </div>
+                        <div class="type">
+                            <p>Artist</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="playlist-left">
+                    <div class="cover">
+                        <img src="https://i.discogs.com/xrt_A--gs_-MeiYYQzcKYPLd1Wz_ksMRf30FzNKbDQw/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgzMDgw/LTEzMTkzNzgzNTgu/anBlZw.jpeg">
+                        <div class="play-button">
+                            <i class="bi bi-play-fill"></i>
+                        </div>
+                    </div>
+                    <div class="information">
+                        <div class="playlist-name">
+                            <p>The Smiths</p>
+                        </div>
+                        <div class="type">
+                            <p>Artist</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-page" id="main-page">
+            <div class="middle-header">
+                <button id="openAll">All</button>
+                <button>Music</button>
+                <button>Podcasts</button>
+            </div>
+            <div class="main-content">
+                <div class="quick-access">
+                    <div class="playlist-main" onclick="loadPlaylist('main-page', 'shut-up.html', 'shut-up.css')">
+                        <div class="cover-main">
+                            <img src="https://i.postimg.cc/6p5MRRGC/Screenshot-2025-08-01-at-18-50-06.png">
+                        </div>
+                        <div class="name-main">
+                            <p>Shut up</p>
+                        </div>
+                    </div>
+                    <div class="playlist-main">
+                        <div class="cover-main">
+                            <img src="https://i.postimg.cc/SKnV1hds/Screenshot-2025-08-01-at-18-51-05.png">
+                        </div>
+                        <div class="name-main">
+                            <p>Liked Songs</p>
+                        </div>
+                    </div>
+                    <div class="playlist-main">
+                        <div class="cover-main">
+                            <img src="https://i.postimg.cc/KYCfdHp5/Screenshot-2025-08-01-at-18-50-17.png">
+                        </div>
+                        <div class="name-main">
+                            <p>All out</p>
+                        </div>
+                    </div>
+                    <div class="playlist-main">
+                        <div class="cover-main">
+                            <img src="https://i.postimg.cc/2Sc2x64M/Screenshot-2025-08-01-at-18-50-49.png">
+                        </div>
+                        <div class="name-main">
+                            <p>Hip Hop Mix</p>
+                        </div>
+                    </div>
+                    <div class="playlist-main">
+                        <div class="cover-main">
+                            <img src="https://i.postimg.cc/6pcQ38k7/Screenshot-2025-08-01-at-22-01-21.png">
+                        </div>
+                        <div class="name-main">
+                            <p>Deftones Mix</p>
+                        </div>
+                    </div>
+                    <div class="playlist-main">
+                        <div class="cover-main">
+                            <img src="https://i.postimg.cc/VvWF0Lf7/Screenshot-2025-08-01-at-18-51-55.png">
+                        </div>
+                        <div class="name-main">
+                            <p>euphoric</p>
+                        </div>
+                    </div>
+                    <div class="playlist-main">
+                        <div class="cover-main">
+                            <img src="https://i.postimg.cc/255SBzY0/Screenshot-2025-08-01-at-22-01-44.png">
+                        </div>
+                        <div class="name-main">
+                            <p>Bunna <br> Summa Radio</p>
+                        </div>
+                    </div>
+                    <div class="playlist-main">
+                        <div class="cover-main">
+                            <img src="https://i.postimg.cc/jSbXT1Tx/Screenshot-2025-08-01-at-22-10-39.png">
+                        </div>
+                        <div class="name-main">
+                            <p>Grace</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="made-for">
+                    <div class="title-main">
+                        <div class="titles">
+                            <div class="small-title">
+                                <p>Made For</p>
+                            </div>
+                            <div class="big-title">
+                                <a href="">Tselmuun</a>
+                            </div>
+                        </div>
+                        <div class="show-all">
+                            <p>Show all</p>
+                        </div>
+                    </div>
+                    <div class="list">
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                <div class="playlist-2">
+                                    <div class="cover-2">
+                                        <img src="https://i.postimg.cc/Gmmrmdvz/Screenshot-2025-08-02-at-00-12-04.png">
+                                    </div>
+                                    <div class="description">
+                                        <p>Hurd, Lkhagvasuren, Javkhlan Samand an...</p>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="swiper-slide">
+                                <div class="playlist-2">
+                                    <div class="cover-2">
+                                        <img src="https://i.postimg.cc/YS4vj1QX/Screenshot-2025-08-02-at-00-14-39.png">
+                                    </div>
+                                    <div class="description">
+                                        <p>Hurd, Lkhagvasuren, Javkhlan Samand an...</p>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="swiper-slide">
+                                <div class="playlist-2">
+                                    <div class="cover-2">
+                                        <img src="https://i.postimg.cc/HxXj9dZX/Screenshot-2025-08-02-at-00-14-44.png">
+                                    </div>
+                                    <div class="description">
+                                        <p>Hurd, Lkhagvasuren, Javkhlan Samand an...</p>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="swiper-slide">
+                                <div class="playlist-2">
+                                    <div class="cover-2">
+                                        <img src="https://i.postimg.cc/x8Q8shh7/Screenshot-2025-08-02-at-00-14-50.png">
+                                    </div>
+                                    <div class="description">
+                                        <p>Hurd, Lkhagvasuren, Javkhlan Samand an...</p>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="swiper-slide">
+                                <div class="playlist-2">
+                                    <div class="cover-2">
+                                        <img src="https://i.postimg.cc/zfkcbg5g/Screenshot-2025-08-02-at-00-31-52.png">
+                                    </div>
+                                    <div class="description">
+                                        <p>Hurd, Lkhagvasuren, Javkhlan Samand an...</p>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="swiper-slide">
+                                <div class="playlist-2">
+                                    <div class="cover-2">
+                                        <img src="https://i.postimg.cc/C1L6jxL6/Screenshot-2025-08-02-at-00-31-58.png">
+                                    </div>
+                                    <div class="description">
+                                        <p>Hurd, Lkhagvasuren, Javkhlan Samand an...</p>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="swiper-slide">
+                                <div class="playlist-2">
+                                    <div class="cover-2">
+                                        <img src="https://i.postimg.cc/FRWCGXYF/Screenshot-2025-08-02-at-00-32-30.png">
+                                    </div>
+                                    <div class="description">
+                                        <p>Hurd, Lkhagvasuren, Javkhlan Samand an...</p>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="swiper-slide">
+                                <div class="playlist-2">
+                                    <div class="cover-2">
+                                        <img src="https://i.postimg.cc/SRnTv196/Screenshot-2025-08-02-at-00-32-12.png">
+                                    </div>
+                                    <div class="description">
+                                        <p>Hurd, Lkhagvasuren, Javkhlan Samand an...</p>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                          </div>
+                    </div>
+                </div>
+                <div class="made-for">
+                    <div class="title-main">
+                        <div class="titles">
+                            <div class="small-title">
+                                <p>Made For</p>
+                            </div>
+                            <div class="big-title">
+                                <a href="">Tselmuun</a>
+                            </div>
+                        </div>
+                        <div class="show-all">
+                            <p>Show all</p>
+                        </div>
+                    </div>
+                    <div class="list">
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                <div class="playlist-2">
+                                    <div class="cover-2">
+                                        <img src="https://i.postimg.cc/3xrTLYRm/Screenshot-2025-08-02-at-00-52-45.png">
+                                    </div>
+                                    <div class="description">
+                                        <p>Hurd, Lkhagvasuren, Javkhlan Samand an...</p>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="swiper-slide">
+                                <div class="playlist-2">
+                                    <div class="cover-2">
+                                        <img src="https://i.postimg.cc/GmM1VV8N/Screenshot-2025-08-02-at-00-52-49.png">
+                                    </div>
+                                    <div class="description">
+                                        <p>Hurd, Lkhagvasuren, Javkhlan Samand an...</p>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="swiper-slide">
+                                <div class="playlist-2">
+                                    <div class="cover-2">
+                                        <img src="https://i.postimg.cc/PxDsLq3s/Screenshot-2025-08-02-at-00-52-52.png">
+                                    </div>
+                                    <div class="description">
+                                        <p>Hurd, Lkhagvasuren, Javkhlan Samand an...</p>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="swiper-slide">
+                                <div class="playlist-2">
+                                    <div class="cover-2">
+                                        <img src="https://i.postimg.cc/bvsjhg1v/Screenshot-2025-08-02-at-00-52-55.png">
+                                    </div>
+                                    <div class="description">
+                                        <p>Hurd, Lkhagvasuren, Javkhlan Samand an...</p>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="swiper-slide">
+                                <div class="playlist-2">
+                                    <div class="cover-2">
+                                        <img src="https://i.postimg.cc/zf6YXhkF/Screenshot-2025-08-02-at-00-53-00.png">
+                                    </div>
+                                    <div class="description">
+                                        <p>Hurd, Lkhagvasuren, Javkhlan Samand an...</p>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="swiper-slide">
+                                <div class="playlist-2">
+                                    <div class="cover-2">
+                                        <img src="https://i.postimg.cc/T1X8nXFy/Screenshot-2025-08-02-at-00-53-06.png">
+                                    </div>
+                                    <div class="description">
+                                        <p>Hurd, Lkhagvasuren, Javkhlan Samand an...</p>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="swiper-slide">
+                                <div class="playlist-2">
+                                    <div class="cover-2">
+                                        <img src="https://i.postimg.cc/MH0CDFJ9/Screenshot-2025-08-02-at-00-53-11.png">
+                                    </div>
+                                    <div class="description">
+                                        <p>Hurd, Lkhagvasuren, Javkhlan Samand an...</p>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="swiper-slide">
+                                <div class="playlist-2">
+                                    <div class="cover-2">
+                                        <img src="https://i.postimg.cc/m2BfDB7J/Screenshot-2025-08-02-at-00-53-17.png">
+                                    </div>
+                                    <div class="description">
+                                        <p>Hurd, Lkhagvasuren, Javkhlan Samand an...</p>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="swiper-slide">
+                                <div class="playlist-2">
+                                    <div class="cover-2">
+                                        <img src="https://i.postimg.cc/FFjXN7k0/Screenshot-2025-08-02-at-00-53-24.png">
+                                    </div>
+                                    <div class="description">
+                                        <p>Hurd, Lkhagvasuren, Javkhlan Samand an...</p>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                          </div>
+                    </div>
+                </div>
+                <div class="radios">
+                    <div class="radio">
+                        <div class="for">
+                            <p>For fans of Radiohead</p>
+                        </div>
+                        <div class="background-cover">
+                            <div class="swiper mySwiper2">
+                                <div class="swiper-wrapper">
+                                  <div class="swiper-slide">
+                                    <img src="https://i.discogs.com/JK5zuA06JQlcUUNtpWuowJZt_kNhat_VAJJG-Oe5YOI/rs:fit/g:sm/q:90/h:600/w:374/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMyMTcz/OTUtMTQ3NTk1ODAy/Mi0xMTExLmpwZWc.jpeg">
+                                  </div>
+                                  <div class="swiper-slide">
+                                    <img src="https://i.discogs.com/JK5zuA06JQlcUUNtpWuowJZt_kNhat_VAJJG-Oe5YOI/rs:fit/g:sm/q:90/h:600/w:374/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMyMTcz/OTUtMTQ3NTk1ODAy/Mi0xMTExLmpwZWc.jpeg">
+                                  </div>
+                                  <div class="swiper-slide">
+                                    <img src="https://i.discogs.com/JK5zuA06JQlcUUNtpWuowJZt_kNhat_VAJJG-Oe5YOI/rs:fit/g:sm/q:90/h:600/w:374/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMyMTcz/OTUtMTQ3NTk1ODAy/Mi0xMTExLmpwZWc.jpeg">
+                                  </div>
+                                  <div class="swiper-slide">
+                                    <img src="https://i.discogs.com/JK5zuA06JQlcUUNtpWuowJZt_kNhat_VAJJG-Oe5YOI/rs:fit/g:sm/q:90/h:600/w:374/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMyMTcz/OTUtMTQ3NTk1ODAy/Mi0xMTExLmpwZWc.jpeg">
+                                  </div>
+                                  <div class="swiper-slide">
+                                    <img src="https://i.discogs.com/JK5zuA06JQlcUUNtpWuowJZt_kNhat_VAJJG-Oe5YOI/rs:fit/g:sm/q:90/h:600/w:374/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMyMTcz/OTUtMTQ3NTk1ODAy/Mi0xMTExLmpwZWc.jpeg">
+                                  </div>
+                                </div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                              </div>
+                        </div>
+                        <div class="overlap">
+                            <div class="radio-look">
+                                <div class="radio-cover">
+                                    <img src="https://i.postimg.cc/d3TmWx8m/Screenshot-2025-08-02-at-16-35-46.png">
+                                </div>
+                                <div class="radio-info">
+                                    <div class="radio-name">
+                                        <h2>Radiohead Radio</h2>
+                                    </div>
+                                    <div class="radio-desc">
+                                        <p>Playlist<i class="bi bi-dot"></i>Spotify</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="more-info">
+                                <div class="with">
+                                    <p>With The Smiths, Jeff Buckley, The Smashing Pumpkins and more</p>
+                                </div>
+                                <div class="on-hover">
+                                    <button class="preview"><i class="bi bi-volume-mute"></i><span>Preview</span></button>
+                                    <div class="right-side">
+                                        <button><i class="bi bi-three-dots"></i></button>
+                                    <button><i class="bi bi-plus-circle"></i></button>
+                                    <button class="play-big"><i class="bi bi-play-circle-fill"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="radio">
+                        <div class="for">
+                            <p>For fans of Radiohead</p>
+                        </div>
+                        <div class="background-cover">
+                            <div class="swiper mySwiper2">
+                                <div class="swiper-wrapper">
+                                  <div class="swiper-slide">
+                                    <img src="https://i.discogs.com/JK5zuA06JQlcUUNtpWuowJZt_kNhat_VAJJG-Oe5YOI/rs:fit/g:sm/q:90/h:600/w:374/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMyMTcz/OTUtMTQ3NTk1ODAy/Mi0xMTExLmpwZWc.jpeg">
+                                  </div>
+                                  <div class="swiper-slide">
+                                    <img src="https://i.discogs.com/JK5zuA06JQlcUUNtpWuowJZt_kNhat_VAJJG-Oe5YOI/rs:fit/g:sm/q:90/h:600/w:374/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMyMTcz/OTUtMTQ3NTk1ODAy/Mi0xMTExLmpwZWc.jpeg">
+                                  </div>
+                                  <div class="swiper-slide">
+                                    <img src="https://i.discogs.com/JK5zuA06JQlcUUNtpWuowJZt_kNhat_VAJJG-Oe5YOI/rs:fit/g:sm/q:90/h:600/w:374/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMyMTcz/OTUtMTQ3NTk1ODAy/Mi0xMTExLmpwZWc.jpeg">
+                                  </div>
+                                  <div class="swiper-slide">
+                                    <img src="https://i.discogs.com/JK5zuA06JQlcUUNtpWuowJZt_kNhat_VAJJG-Oe5YOI/rs:fit/g:sm/q:90/h:600/w:374/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMyMTcz/OTUtMTQ3NTk1ODAy/Mi0xMTExLmpwZWc.jpeg">
+                                  </div>
+                                  <div class="swiper-slide">
+                                    <img src="https://i.discogs.com/JK5zuA06JQlcUUNtpWuowJZt_kNhat_VAJJG-Oe5YOI/rs:fit/g:sm/q:90/h:600/w:374/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMyMTcz/OTUtMTQ3NTk1ODAy/Mi0xMTExLmpwZWc.jpeg">
+                                  </div>
+                                </div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="footer">
+                <div class="footer-top">
+                    <div class="company">
+                        <ul>
+                            <li class="bold"><a href="">Company</a></li>
+                            <li><a href="">About</a></li>
+                            <li><a href="">Jobs</a></li>
+                            <li><a href="">For the Record</a></li>
+                        </ul>
+                    </div>
+                    <div class="communities">
+                        <ul>
+                            <li class="bold"><a href="">Communities</a></li>
+                            <li><a href="">For Artists</a></li>
+                            <li><a href="">Developers</a></li>
+                            <li><a href="">Advertising</a></li>
+                            <li><a href="">Investors</a></li>
+                            <li><a href="">Vendors</a></li>
+                        </ul>
+                    </div>
+                    <div class="useful links">
+                        <ul>
+                            <li class="bold"><a href="">Useful links</a></li>
+                            <li><a href="">Support</a></li>
+                            <li><a href="">Free Mobile app</a></li>
+                            <li><a href="">Popular by country</a></li>
+                        </ul>
+                    </div>
+                    <div class="spofity plans">
+                        <ul>
+                            <li class="bold"><a href="">Spofity plans</a></li>
+                            <li><a href="">Premium Individual</a></li>
+                            <li><a href="">Premium Duo</a></li>
+                            <li><a href="">Premium Family</a></li>
+                            <li><a href="">Premium Student</a></li>
+                            <li><a href="">Spotify Free</a></li>
+                        </ul>
+                    </div>
+                    <div class="socials">
+                        <button><i class="bi bi-instagram"></i></button>
+                        <button><i class="bi bi-twitter"></i></button>
+                        <button><i class="bi bi-facebook"></i></button>
+                    </div>
+                </div>
+                <hr>
+                <div class="footer-bottom">
+                    <div class="left-bottom">
+                        <ul>
+                            <li><a href="">Legal</a></li>
+                            <li><a href="">Safety & Privacy Center</a></li>
+                            <li><a href="">Privacy Policy</a></li>
+                            <li><a href="">Cookies</a></li>
+                            <li><a href="">About ads</a></li>
+                            <li><a href="">Accessibilty</a></li>
+                        </ul>
+                    </div>
+                    <div class="right-bottom">
+                        <p><i class="bi bi-c-circle"></i> 2025 Spotify AB</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right-sidebar">
+            <div class="right-header">
+                <div class="playing">
+                    <div class="hide-bar">
+                        <button><i class="bi bi-layout-sidebar"></i></button>
+                    </div>
+                    <div class="playing-playlist">
+                        <h1>Shut up</h1>
+                    </div>
+                </div>
+                <div class="toolbar">
+                    <button><i class="bi bi-three-dots"></i></button>
+                    <button class="expand-button"><i class="bi bi-arrows-angle-expand"></i></button>
+                </div>
+            </div>
+            <div class="now-playing">
+                <div class="song-cover">
+                    <img src="https://i.scdn.co/image/ab67616d0000b273b66c23534dd78ff7d3da83b8">
+                </div>
+                <div class="more-information">
+                    <div class="song-playing">
+                        <div class="song-info">
+                            <div class="song-name">
+                                <a href="">Wicked Game</a>
+                            </div>
+                            <div class="song-artist">
+                                <a>Chris Isaak</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="add">
+                        <button>
+                            <i class="bi bi-patch-check-fill"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="the-artist">
+                <div class="artist-profile">
+                    <div class="pfp">
+                        <img src="https://www.buscadero.com/wp-content/uploads/2016/02/ChrisIsaak-FTR-.jpg">
+                    </div>
+                    <div class="about-the-artist">
+                        <p>About the artist</p>
+                    </div>
+                </div>
+                <div class="more-artist">
+                    <div class="artist-name">
+                        <a>Chris Isaak</a>
+                    </div>
+                    <div class="listeners-follow">
+                        <div class="listeners">
+                            <p>9,847,602 monthly listeners</p>
+                        </div>
+                        <div class="follow-button">
+                            <button>Follow</button>
+                        </div>
+                    </div>
+                    <div class="artist-info">
+                        <p>Chris Isaak fashioned himself as a throwback to the early days of rock & roll, devising a fusion between <span><a href="">Elvis</a></span>...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="credits">
+                <div class="credits-top">
+                    <div class="credits-title">
+                        <p>Credits</p>
+                    </div>
+                    <div class="show-all">
+                        <button>Show all</button>
+                    </div>
+                </div>
+                <div class="credits-middle">
+                    <div class="main-artist">
+                        <p class="artist-name">Chris Isaak</p>
+                        <p class="role">Main artist, composer</p>
+                    </div>
+                    <div class="follow-button">
+                        <button>Follow</button>
+                    </div>
+                </div>
+                <div class="credits-bottom">
+                    <div class="producer">
+                        <p class="artist-name">Eric Jacobsen</p>
+                        <p class="role">Producer</p>
+                    </div>
+                </div>
+            </div>
+            <div class="on-tour">
+                <div class="tour-top">
+                    <div class="tour-title">
+                        <p>On tour</p>
+                    </div>
+                    <div class="show-all">
+                        <button>Show all</button>
+                    </div>
+                </div>
+                <div class="tour-middle">
+                    <div class="date">
+                        <div class="month">
+                            <p>Aug</p>
+                        </div>
+                        <div class="day">
+                            <p>8</p>
+                        </div>
+                    </div>
+                    <div class="location">
+                        <div class="location-title">
+                            <h3>Wilmington</h3>
+                        </div>
+                        <div class="artist1">
+                            <p>Chris Isaak</p>
+                        </div>
+                        <div class="time">
+                            <p>Fri 8:00 PM <i class="bi bi-dot"></i> Cape Fear...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tour-bottom">
+                    <div class="date">
+                        <div class="month">
+                            <p>Aug</p>
+                        </div>
+                        <div class="day">
+                            <p>9</p>
+                        </div>
+                    </div>
+                    <div class="location">
+                        <div class="location-title">
+                            <h3>Charleston</h3>
+                        </div>
+                        <div class="artist1">
+                            <p>Chris Isaak</p>
+                        </div>
+                        <div class="time">
+                            <p>Sat 8:00 PM <i class="bi bi-dot"></i> The Reviera...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="queue">
+                <div class="queue-top">
+                    <div class="queue-title">
+                        <p>Next in queue</p>
+                    </div>
+                    <div class="queue-open">
+                        <button>Open queue</button>
+                    </div>
+                </div>
+                <div class="queue-bottom">
+                    <div class="the-song">
+                        <div class="cover-song">
+                            <img src="https://i.scdn.co/image/ab67616d0000b2736a760642a56847027428cb61">
+                        </div>
+                        <div class="overlay-play">
+                            <button><i class="bi bi-play-fill"></i></button>
+                        </div>
+                        <div class="info-song">
+                            <div class="name-song">
+                                <p>Lover, You Should've...</p>
+                            </div>
+                            <div class="artist-song">
+                                <a href="">Jeff Buckley</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hover">
+                        <button><i class="bi bi-three-dots"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="player">
+        <div class="playing-song">
+            <div class="song-cover-image">
+                <img src="https://i.scdn.co/image/ab67616d0000b273b66c23534dd78ff7d3da83b8">
+            </div>
+            <div class="playing-info">
+                <div class="song-title">
+                    <p>Wicked Game</p>
+                    <p class="artist-player">Chris Isaak</p>
+                </div>
+                <div class="add-playlist">
+                    <i class="bi bi-patch-check-fill"></i>
+                </div>
+            </div>
+        </div>
+        <div class="player-song">
+            <div class="player-top">
+                <button class="shuffle"><i class="bi bi-shuffle"></i></button>
+                <div class="skip">
+                    <button><i class="bi bi-skip-start-fill"></i></button>
+                </div>
+                <div class="play">
+                    <button>▶</button>
+                </div>
+                <div class="skip">
+                    <button><i class="bi bi-skip-end-fill"></i></button>
+                </div>
+                <button><i class="bi bi-repeat"></i></button>
+            </div>
+            <div class="player-bottom">
+                <span id="start">0:00</span>
+                <div class="progress-input">
+                    <input type="range" id="progress" value="0" min="0" max="100">
+                </div>
+                <span id="start">4:49</span>
+            </div>
+        </div>
+        <div class="icons">
+            <button></button>
+        </div>
+    </div>
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 3,
+            spaceBetween: 0,
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+      </script>
+      <script>
+        var swiper = new Swiper(".mySwiper2", {
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+      </script>
+      <script src="spotify.js"></script>
+</body>
+</html>
